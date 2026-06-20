@@ -1,16 +1,109 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# CodeCollab - Real-Time Code Collaboration Platform
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Overview
 
-## React Compiler
+CodeCollab is a real-time code collaboration platform that enables multiple users to write, edit, and collaborate on code simultaneously within a shared room. The platform is designed to help developers, students, and teams collaborate efficiently from different locations through live code synchronization.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The application is built using React for the frontend, Spring Boot for the backend, and MySQL for data management. Real-time communication is achieved using WebSocket technology, allowing instant updates across all connected users.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Create and join coding rooms using a unique Room ID
+* Real-time code synchronization between multiple users
+* Multi-user collaboration
+* Responsive and user-friendly interface
+* Fast and reliable WebSocket communication
+* Secure backend APIs using Spring Boot
+* Database integration with MySQL
+* Scalable architecture for future enhancements
+
+## Tech Stack
+
+### Frontend
+
+* React.js
+* HTML5
+* CSS3
+* JavaScript
+
+### Backend
+
+* Spring Boot
+* Java
+* Maven
+* WebSocket
+
+### Database
+
+* MySQL
+
+## Project Architecture
+
+### Frontend
+
+* User Interface
+* Room Management
+* Code Editor Integration
+* WebSocket Client
+
+### Backend
+
+* REST Controllers
+* WebSocket Server
+* Service Layer
+* Repository Layer
+* Database Management
+
+### Database
+
+* User Information
+* Room Details
+* Session Management
+
+## How It Works
+
+1. A user creates a room and receives a unique Room ID.
+2. Other users join the room using the Room ID.
+3. Users can write and edit code collaboratively.
+4. Every code update is sent to the server through WebSocket.
+5. The server broadcasts the changes to all connected users instantly.
+6. All participants see the updated code in real time.
+
+## Installation and Setup
+
+### Backend Setup
+
+1. Configure MySQL database.
+2. Update application.properties with database credentials.
+3. Run the Spring Boot application.
+
+```bash
+mvn spring-boot:run
+```
+
+### Frontend Setup
+
+```bash
+npm install
+npm start
+```
+
+## Future Enhancements
+
+* Authentication and Authorization
+* Video and Voice Chat
+* Multi-language Code Execution
+* Code Version History
+* AI-Powered Code Suggestions
+* Cloud Deployment
+
+## Author
+
+Kanayya Mahindrakar
+
+## Project Goal
+
+The goal of CodeCollab is to provide a seamless real-time coding experience that improves teamwork, remote learning, technical interviews, pair programming, and collaborative software development.
